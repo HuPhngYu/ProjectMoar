@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/game.js"></script>
+        <title>Still No Album</title>
+    </head>
+    <body>
+        <div class="container">
+            <div id="nav-placeholder"></div>
+            <!-- first row-->
+            <div class="row">
+                <div class="col-md-offset-1 col-md-4">
+                    <h4>You have:</h4>
+                    <div>
+                        <strong>Adams: </strong><span id="adams">0</span>
+                    </div>
+                    <div>
+                        <strong>Cursors: </strong><span id="cursors">0</span>
+                    </div>
+                    <div>
+                        <strong>Puppies: </strong><span id="puppies">0</span>
+                    </div>
+                    <div>
+                        <strong>Boyfriends: </strong><span id="boyfriends">0</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4>Items</h4>
+                    <button class="btn btn-success btn-block" onclick="getAdam(1)">Get An Adam!</button>
+                    <button class="btn btn-default btn-block" onclick="buyCursor()">Buy A Cursor (<span id="cursorCost">10</span>)</button>
+                    <button class="btn btn-default btn-block" onclick="buyPuppy()">Buy A Puppy (<span id="puppyCost">100</span>)</button>
+                    <button class="btn btn-default btn-block" onclick="buyBoyfriend()">Buy A Boyfriend (<span id="boyfriendCost">300</span>)</button>
+                </div>
+                <div class="col-md-3">
+                    <h4>Upgrades</h4>
+                    Comming soon
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

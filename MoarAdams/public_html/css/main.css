@@ -1,0 +1,13 @@
+// classes go here
+.quote-container {
+  position: relative;   // must set container div to relative or it won't work
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+// ids go here
