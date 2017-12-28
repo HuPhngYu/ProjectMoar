@@ -3,11 +3,13 @@ var adams = 0;
 var cursors = 0;
 var puppies = 0;
 var boyfriends = 0;
+var concerts = 0;
 
 // item cost
 var cursorCost = 10;
 var puppyCost = 100;
-var boyfriendCost = 300;
+var boyfriendCost = 500;
+var concertCost = 1000;
 
 function getAdam(number) {
     adams = adams + number;
@@ -47,8 +49,17 @@ function buyBoyfriend() {
     document.getElementById('boyfriendCost').innerHTML = boyfriendCost;
 };
 
+function buyConcert() {
+    if (adams >= concertCost) {
+        concerts = concerts + 1;
+        adams = adams - concertCost;
+        document.getElementById('concerts').innerHTML = concerts;
+        document.getElementById('adams').innerHTML = adams;
+        concertCost = Math.round(concertCost * 115 / 100);
+    }
+    document.getElementById('concertCost').innerHTML = concertCost;
+};
+
 window.setInterval(function(){
-    getAdam(cursors);
-    getAdam(puppies * 5);
-    getAdam(boyfriends * 20);
+    getAdam(cursors + puppies * 10 + boyfriends * 50 + concerts * 100);
 }, 1000);
