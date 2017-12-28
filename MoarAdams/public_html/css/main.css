@@ -10,4 +10,24 @@
   transform: translate(-50%,-50%);
 }
 
-// ids go here
+.footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+//id goes here
+#fadeout-alert {
+    padding: 20px;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
+
+#closebtn {
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    transition: 0.3s;
+}
