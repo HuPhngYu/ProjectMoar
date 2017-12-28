@@ -4,6 +4,7 @@ var cursors = 0;
 var puppies = 0;
 var boyfriends = 0;
 var concerts = 0;
+var persec = 0;
 
 // item cost
 var cursorCost = 10;
@@ -61,5 +62,7 @@ function buyConcert() {
 };
 
 window.setInterval(function(){
-    getAdam(cursors + (puppies * 10) + (boyfriends * 50) + (concerts * 100));
+    persec = cursors + (puppies * 10) + (boyfriends * 50) + (concerts * 100);
+    getAdam(persec);
+    document.getElementById("persec").innerHTML = persec;
 }, 1000);
