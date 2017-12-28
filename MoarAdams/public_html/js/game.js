@@ -52,4 +52,3 @@ window.setInterval(function(){
     getAdam(puppies * 5);
     getAdam(boyfriends * 20);
 }, 1000);
-
