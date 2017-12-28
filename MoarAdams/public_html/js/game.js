@@ -12,6 +12,11 @@ var puppyCost = 100;
 var boyfriendCost = 500;
 var concertCost = 1000;
 
+function getPersec() {
+    persec = cursors + (puppies * 10) + (boyfriends * 50) + (concerts * 100);
+    document.getElementById("persec").innerHTML = persec;
+};
+
 function getAdam(number) {
     adams = adams + number;
     document.getElementById('adams').innerHTML = adams;
@@ -24,6 +29,7 @@ function buyCursor() {
         document.getElementById('cursors').innerHTML = cursors;
         document.getElementById('adams').innerHTML = adams;
         cursorCost = Math.round(cursorCost * 115 / 100);
+        getPersec();
     }
     document.getElementById('cursorCost').innerHTML = cursorCost;
 };
@@ -35,6 +41,7 @@ function buyPuppy() {
         document.getElementById('puppies').innerHTML = puppies;
         document.getElementById('adams').innerHTML = adams;
         puppyCost = Math.round(puppyCost * 115 / 100);
+        getPersec();
     }
     document.getElementById('puppyCost').innerHTML = puppyCost;
 };
@@ -46,6 +53,7 @@ function buyBoyfriend() {
         document.getElementById('boyfriends').innerHTML = boyfriends;
         document.getElementById('adams').innerHTML = adams;
         boyfriendCost = Math.round(boyfriendCost * 115 / 100);
+        getPersec();
     }
     document.getElementById('boyfriendCost').innerHTML = boyfriendCost;
 };
@@ -57,12 +65,11 @@ function buyConcert() {
         document.getElementById('concerts').innerHTML = concerts;
         document.getElementById('adams').innerHTML = adams;
         concertCost = Math.round(concertCost * 115 / 100);
+        getPersec();
     }
     document.getElementById('concertCost').innerHTML = concertCost;
 };
 
 window.setInterval(function(){
-    persec = cursors + (puppies * 10) + (boyfriends * 50) + (concerts * 100);
     getAdam(persec);
-    document.getElementById("persec").innerHTML = persec;
 }, 1000);
