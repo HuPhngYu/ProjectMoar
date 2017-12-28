@@ -1,5 +1,6 @@
+// what the fuck
 .quote-container {
-  position: relative;   // must set container div to relative or it won't work
+  position: relative;
 }
 
 .centered {
