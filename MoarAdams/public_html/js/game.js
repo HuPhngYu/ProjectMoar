@@ -61,5 +61,5 @@ function buyConcert() {
 };
 
 window.setInterval(function(){
-    getAdam(cursors + puppies * 10 + boyfriends * 50 + concerts * 100);
+    getAdam(cursors + (puppies * 10) + (boyfriends * 50) + (concerts * 100));
 }, 1000);
