@@ -4,18 +4,31 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
         <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/game.js"></script>
         <title>Still No Album</title>
     </head>
-    <body>
+    <body onload="load()">
         <div class="container">
             <div id="nav-placeholder"></div>
-            <!-- first row-->
+            <!-- first row -->
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-offset-3 col-md-2">
+                    <button class="btn btn-primary btn-block" onclick="save()">Save Game</button>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary btn-block" onclick="load()">Load Game</button>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-danger btn-block" onclick="deleteSave()">Delete</button>
+                </div>
+            </div>
+            <!-- second row -->
+            <div class="row">
+                <div class="col-md-5">
                     <h3>You have: <span id="adams">0</span> Adams (and still 0 album lol)</h3>
                     <h4><span id="persec">0</span> adams per sec</h4>
                     <div>
@@ -42,6 +55,15 @@
                 <div class="col-md-3">
                     <h4>Upgrades</h4>
                     Coming soon
+                </div>
+            </div>
+            <!-- third row -->
+            <div class="row">
+                <div class="footer col-md-offset-2 col-md-6">
+                    <div class="alert alert-info" id="fadeout-alert" style="display: none;" hidden>
+                        <span id="message"></span>
+                        <span id="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    </div>
                 </div>
             </div>
         </div>
